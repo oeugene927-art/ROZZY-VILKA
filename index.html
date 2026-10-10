@@ -3,52 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROZZY KCSE SUCCESS WISH</title>
+    <title>Success Wishes | Rozzy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
+    <div class="page-shell">
         <header class="hero">
-            <div class="glow-avatar">✨</div>
-            <span class="hero-badge">FOR MY BESTIE ROZZY</span>
-            <h1>ROZZY, YOUR KCSE SUCCESS IS ON THE WAY! 💫</h1>
-            <p class="tagline">Your hard work, focus, and brilliance are about to shine brighter than ever.</p>
+            <div class="hero-glow">✦</div>
+            <span class="eyebrow">A wish for your next chapter</span>
+            <h1>ROZZY, SUCCESS IS ALREADY YOURS</h1>
+            <p class="subtitle">May your effort bloom into results, your dreams become reality, and your future shine brighter than ever.</p>
         </header>
 
-        <nav class="nav-bar">
-            <button class="nav-btn active" onclick="showTab('success')">🎯 Success</button>
-            <button class="nav-btn" onclick="showTab('promise')">💪 Promise</button>
-            <button class="nav-btn" onclick="showTab('victory')">🏆 Victory</button>
+        <nav class="nav-bar" aria-label="success sections">
+            <button class="nav-btn active" data-tab="success" type="button">Success</button>
+            <button class="nav-btn" data-tab="promise" type="button">Promise</button>
+            <button class="nav-btn" data-tab="victory" type="button">Victory</button>
         </nav>
 
         <main class="content-panel">
             <section id="success-tab" class="tab-content active">
                 <div class="message-card main-message">
-                    <p class="eyebrow">Dear Rozzy</p>
-                    <h2>KCSE is not just an exam — it is the beginning of your greatness.</h2>
-                    <p>I believe in you so much. Your effort, discipline, and sharp mind are enough to take you far. Keep going, stay focused, and trust the process. Every chapter you study is building a brighter future for you.</p>
-                    <div class="quote-block">"You are capable, prepared, and destined for success. I am cheering you on every single step of the way."</div>
+                    <p class="card-tag">Dear Rozzy</p>
+                    <h2>Every effort you have made is preparing you for something beautiful.</h2>
+                    <p>Your discipline, your courage, and your dreams are not small. They are the beginning of a bright future. Keep believing, keep working, and keep moving forward — success is not a matter of chance, it is the reward of your hard work and heart.</p>
+                    <div class="quote-block">“You are capable, prepared, and destined for greatness. I believe in your future and I celebrate the success that is coming your way.”</div>
                 </div>
             </section>
 
             <section id="promise-tab" class="tab-content">
-                <h2>What I believe about you</h2>
+                <h2>What makes you unstoppable</h2>
                 <div class="feature-grid">
                     <div class="feature-card">
                         <span class="feature-emoji">📚</span>
                         <h3>Focused</h3>
-                        <p>You study with purpose and heart, and that makes you unstoppable.</p>
+                        <p>You study with purpose and determination, and that makes your goals feel closer every day.</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-emoji">💡</span>
                         <h3>Brilliant</h3>
-                        <p>Your mind is full of potential, wisdom, and ideas that will shine.</p>
+                        <p>Your mind is full of potential, clarity, and ideas that will carry you into greatness.</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-emoji">🌟</span>
                         <h3>Strong</h3>
-                        <p>You are resilient, determined, and more than capable of this moment.</p>
+                        <p>You are resilient and brave enough to keep going, even when the journey feels demanding.</p>
                     </div>
                 </div>
             </section>
@@ -57,18 +56,18 @@
                 <h2>Victory is calling your name</h2>
                 <div class="photo-card">
                     <div class="image-frame">
-                        <img src="ROZZY.jpeg" alt="Bestie Photo" id="bestie-photo">
+                        <img src="ROZZY.jpeg" alt="Rozzy smiling" id="bestie-photo">
                     </div>
-                    <h3>ROZZY, YOU ARE A STAR! 🌟</h3>
-                    <p>I know your results will reflect your brilliance. Keep believing, keep working, and keep shining — the future is yours.</p>
+                    <h3>ROZZY, YOU ARE A STAR</h3>
+                    <p>Your future is filled with achievement, joy, and the kind of success that reflects your effort and your heart. Keep shining — the world is waiting for your brilliance.</p>
                 </div>
             </section>
         </main>
 
         <div class="button-wrapper">
-            <button class="magic-heart-btn" onclick="triggerMagic(event)">
-                <span class="heart-icon">💖</span>
-                <span class="btn-text">Celebrate Rozzy</span>
+            <button class="celebrate-btn" type="button" onclick="triggerMagic(event)">
+                <span class="heart-icon">✨</span>
+                <span class="btn-text">Celebrate Success</span>
             </button>
         </div>
     </div>
