@@ -6,45 +6,48 @@ function showTab(tabName) {
     const buttons = document.querySelectorAll('.nav-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    document.getElementById(`${tabName}-tab`).classList.add('active');
-    
+    const targetTab = document.getElementById(`${tabName}-tab`);
+    if (targetTab) targetTab.classList.add('active');
+
     const activeButton = Array.from(buttons).find(btn => 
-        btn.getAttribute('onclick').includes(tabName)
+        btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabName)
     );
     if (activeButton) activeButton.classList.add('active');
 }
 
-// Sweet Words Array
+window.addEventListener('DOMContentLoaded', () => {
+    showTab('success');
+});
+
+// Success Words Array
 const sweetWords = [
-    "Bestie Forever 💕",
-    "You're Awesome 🌟",
-    "Sister for Life 👭",
-    "Unforgettable Memories ✨",
-    "You Light Up My Life 💡",
-    "Truly Blessed 🙏",
-    "Endless Laughs 😂",
-    "Support & Cheer 🎉",
-    "Pure Magic 💖"
+    "ROZZY YOU WILL SHINE ✨",
+    "KCSE SUCCESS IS YOURS 🏆",
+    "YOU ARE AMAZING 💖",
+    "BRIGHT FUTURE AHEAD 🌟",
+    "BESTIE FOR LIFE 👭",
+    "YOU ARE CAPABLE 💪",
+    "DESTINED FOR GREATNESS 🚀",
+    "KEEP FLYING HIGH 🕊️",
+    "YOUR DREAMS ARE REAL 🌈",
+    "WINNER ENERGY 🔥"
 ];
 
-// Color Palette (Pink & Luminous Green focused)
-const colors = ["#ff007f", "#39ff14", "#d6006e", "#00ffcc", "#ff75c3", "#76ff03"];
+// Color Palette
+const colors = ["#1f3bff", "#ff79c6", "#ffd166", "#8efc73", "#5a2bd6", "#ff4da6"];
 
 // Magic Trigger Function on Button Click
 function triggerMagic(event) {
     const btn = event.currentTarget;
     const rect = btn.getBoundingClientRect();
-    
-    // Origin point from center of button
+
     const startX = rect.left + rect.width / 2;
     const startY = rect.top + rect.height / 2;
 
-    // Spawn Flying Sweet Words
     for (let i = 0; i < 12; i++) {
         createWord(startX, startY);
     }
 
-    // Spawn Flying Ribbons
     for (let j = 0; j < 16; j++) {
         createRibbon(startX, startY);
     }
@@ -53,21 +56,18 @@ function triggerMagic(event) {
 function createWord(x, y) {
     const el = document.createElement('div');
     el.className = 'flying-word';
-    
-    // Pick random message & color
+
     el.textContent = sweetWords[Math.floor(Math.random() * sweetWords.length)];
     const bg = colors[Math.floor(Math.random() * colors.length)];
     el.style.backgroundColor = bg;
 
-    // Border glow for neon effect
-    if (bg === "#39ff14" || bg === "#00ffcc") {
-        el.style.color = "#000";
+    if (bg === '#8efc73' || bg === '#ffd166') {
+        el.style.color = '#111';
     }
 
     el.style.left = `${x}px`;
     el.style.top = `${y}px`;
 
-    // Random trajectory directions
     const dx = (Math.random() - 0.5) * 500;
     const dy = -Math.random() * 450 - 100;
     const rot = (Math.random() - 0.5) * 60;
